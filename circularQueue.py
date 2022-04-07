@@ -40,6 +40,7 @@ class CircularQueue():
         if self.front == -1:
             print("No element in the circular queue")
         elif self.rear >= self.front:
+            print("<<<<All elements of Queue>>>>\n")
             for i in range(self.front, self.rear + 1):
                 print(self.queue[i], end = " ")
             print()
@@ -51,16 +52,20 @@ class CircularQueue():
             print()
 
 # Driver code 
-obj = CircularQueue(5)
-obj.enqueue(1)
-obj.enqueue(2)
-obj.enqueue(3)
-obj.enqueue(4)
-obj.enqueue(5)
+
+obj = CircularQueue(6)
+items = ['Football', 'Boots', 'Watch', 'Uniform', 'Bag', 'Laptop' ]
+for i in items:
+    obj.enqueue(i)
+# obj.enqueue(2)
+# obj.enqueue(3)
+# obj.enqueue(4)
+# obj.enqueue(5)
 print("Initial queue")
-# print("Queue elements", )
+
 obj.printCircularQueue()
 
 obj.dequeue()
-print("After removing an element from the queue")
+
+print("\nAfter removing an element from the queue")
 obj.printCircularQueue()
