@@ -23,11 +23,9 @@ class double_linked:
             node = node.next
 
 Doublelist = double_linked()
+items = [12,13,14,15,16]
+for i in items:
+    Doublelist.push(i)
 
-Doublelist.push(12)
-Doublelist.push(13)
-Doublelist.push(14)
-Doublelist.push(15)
-Doublelist.push(16)
 
 Doublelist.listprint(Doublelist.head)
