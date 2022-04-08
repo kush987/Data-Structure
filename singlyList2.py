@@ -11,11 +11,6 @@ class Linkedlist:
     def __init__(self):
         self.headval = None
     
-    def printVal(self):
-        printval = self.headval
-        while printval:
-            print(printval.dataval)
-            printval = printval.nextval
 
     def AtBegin(self, newdata): # Add node at the begining of the list
         self.newNode = Node(newdata)     
@@ -29,10 +24,28 @@ class Linkedlist:
         if self.headval is None:
             self.headval = self.newNode1
             return
-        last = self.headval
-        while last.nextval:
-            last = last.nextval
-        last.nextval = self.newNode1
+        self.last = self.headval
+        while self.last.nextval:
+            self.last = self.last.nextval
+        self.last.nextval = self.newNode1
+
+    # def Inbtw(self, mid, newdata):
+    #     newNode = Node(newdata)
+    #     if mid is None:
+    #         print("The node is absent")
+    #         return
+        
+    #     newNode.nextval = mid.nextval
+    #     mid.nextval = self.last.nextval
+
+
+    def printVal(self):
+        printval = self.headval
+        while printval:
+            print(printval.dataval)
+            printval = printval.nextval
+
+
 
 list = Linkedlist()
 
@@ -46,7 +59,9 @@ e2.nextval = e3
 e3.nextval = e4
 
 list.AtBegin("Sun")
+
 list.AtEnd("Sat")
+# list.Inbtw(list.headval.nextval,"Fri")
 
 
 list.printVal()
