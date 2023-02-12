@@ -1,5 +1,5 @@
 
-Question1: **Tralling factorials of zero**
+#Question1: **Tralling factorials of zero**
 
 formula is= [n/5] + [n/25] + [n/125]..........n
 how many zeros are their in number at the end.
@@ -16,7 +16,7 @@ int main(){
 	return 0;
 }
 
-**Question2**: **Given an array of N integers. Find the first element that occurs at least K number of times**.
+#**Question2**: **Given an array of N integers. Find the first element that occurs at least K number of times**.
 
 Input :
 N = 7, K = 2
@@ -45,7 +45,7 @@ class Solution:
                 break
         return -1
         
-**Question3**: **how many balloon we can create from given string S**
+#**Question3**: **how many balloon we can create from given string S**
 
 Input:
 S: loonbalxballpoon
@@ -89,8 +89,8 @@ def maxInstance (s : str) -> int:
             n = n - 1
         count -= 1 
     return co
-# S = 'bnlbllanmbaamnmobbanablboolonlol'
-# S= 'loonbalxballpoon'
+<!-- # S = 'bnlbllanmbaamnmobbanablboolonlol' -->
+<!-- # S= 'loonbalxballpoon' -->
 S = 'nlaebolko'
 print(maxInstance(S))
 
